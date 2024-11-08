@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>練習</title>
 </head>
+
 <body>
 
+    <!--
+    previousValue：一つ前の処理までの累積結果（A）
+    currentValue：現在処理中の配列要素（B）
+    
+    return previousValue.concat(currentValue);
+   →一つ前の処理までの処理に現在の配列要素を結合させる
+    -->
+
     <script type="text/javascript">
-        function toOneDimension(previousValue,currentValue){
+        function toOneDimension(previousValue, currentValue) {
             return previousValue.concat(currentValue);
         }
-        
-        var sampleArrayA=[
-            ['A1','A2','A3'],
-            ['B1','B2','B3'],
-            ['C1','C2','C3']
-        ]; 
 
+        var sampleArrayA = [
+            ['A1', 'A2', 'A3'],
+            ['B1', 'B2', 'B3'],
+            ['C1', 'C2', 'C3']
+        ];
+
+        //　sampleArrayA.reverse(); →　配列を逆順にする
         sampleArrayA.reverse();
-        
-            var sampleArrayB= sampleArrayA.reduce(toOneDimension);
-            for(var counterVar=0;counterVar<sampleArrayB.length;counterVar++){
-                document.write('sampleArrayB['+counterVar +']:');
-                document.write(sampleArrayB[counterVar]);
-                document.write('<br/>');
-            }
-        </script>
-    
+
+        //　sampleArrayA.reduce(toOneDimension); →二次元配列を一次元配列にする
+        var sampleArrayB = sampleArrayA.reduce(toOneDimension);
+
+        //　counterVar　→０から始まり、一元配列の長さ（９）未満まで1ずつ足していく
+        for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
+
+            // 文字列＋０から８まで
+            document.write('sampleArrayB[' + counterVar + ']:');
+
+            //sampleArrayAの一次元配列＋？　　↓
+            document.write(sampleArrayB[counterVar]);
+            document.write('<br/>');
+        }
+    </script>
+
 </body>
+
 </html>
