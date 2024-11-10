@@ -25,8 +25,8 @@
         for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
             console.log('sampleArrayB[' + counterVar + ']:');
 
-            //sampleArrayAを一次元配列にして前の処理に結合させる
-            console.log(sampleArrayB);
+            //[counterVar]の追加 ← ０から始まり、一元配列の長さ（９）未満まで 一次元配列を繰り返す
+            console.log(sampleArrayB[counterVar]);
             document.write('<br/>');
         }
     </script>
