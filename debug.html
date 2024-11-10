@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <!--改修前-->
+    <!--デバッグ-->
 
     <script type="text/javascript">
         function toOneDimension(previousValue, currentValue) {
@@ -23,11 +23,13 @@
 
         var sampleArrayB = sampleArrayA.reduce(toOneDimension);
         for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
-            document.write('sampleArrayB[' + counterVar + ']:');
+            console.log('sampleArrayB[' + counterVar + ']:');
             document.write(sampleArrayB[counterVar]);
             document.write('<br/>');
         }
     </script>
+
+    <!---->
 
 </body>
 
