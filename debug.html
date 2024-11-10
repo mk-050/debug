@@ -21,14 +21,10 @@
             ['C1', 'C2', 'C3']
         ];
 
-        sampleArrayA.reverse();
-
         var sampleArrayB = sampleArrayA.reduce(toOneDimension);
         for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
-            document.write('sampleArrayB[' + counterVar + ']:');
-
-            //[counterVar]無し
-            con(sampleArrayB);
+            console.log('sampleArrayB[' + counterVar + ']:');
+            console.log(sampleArrayB);
             document.write('<br/>');
         }
     </script>
