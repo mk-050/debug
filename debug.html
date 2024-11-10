@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デバッグ</title>
+</head>
+
+<body>
+    <!--改修前-->
+
+    <script type="text/javascript">
+        function toOneDimension(previousValue, currentValue) {
+            return previousValue.concat(currentValue);
+        }
+
+        var sampleArrayA = [
+            ['A1', 'A2', 'A3'],
+            ['B1', 'B2', 'B3'],
+            ['C1', 'C2', 'C3']
+        ];
+
+        sampleArrayA.reverse();
+
+        var sampleArrayB = sampleArrayA.reduce(toOneDimension);
+        for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
+            document.write('sampleArrayB[' + counterVar + ']:');
+            document.write(sampleArrayB[counterVar]);
+            document.write('<br/>');
+        }
+    </script>
+
+</body>
+
+</html>
