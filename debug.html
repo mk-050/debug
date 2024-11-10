@@ -24,6 +24,8 @@
         var sampleArrayB = sampleArrayA.reduce(toOneDimension);
         for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
             console.log('sampleArrayB[' + counterVar + ']:');
+
+            //sampleArrayAを一次元配列にして前の処理に結合させる
             console.log(sampleArrayB);
             document.write('<br/>');
         }
