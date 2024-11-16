@@ -10,31 +10,54 @@
 <body>
     <!--デバッグ-->
 
+    <!--
+    previousValue：一つ前の処理までの累積結果（A）
+    currentValue：現在処理中の配列要素（B）
+    
+    return previousValue.concat(currentValue);
+   →一つ前の処理までの処理に現在の配列要素を結合させる
+    -->
+
     <script type="text/javascript">
+
+        //一つ前の処理に処理中の配列を結合させる関数
         function toOneDimension(previousValue, currentValue) {
             return previousValue.concat(currentValue);
         }
 
+        //二次元配列
         var sampleArrayA = [
             ['A1', 'A2', 'A3'],
             ['B1', 'B2', 'B3'],
-            ['C1', 'C2', 'C3']
+            ['C1', 'C2', 'C3'],
         ];
 
-        //　sampleArrayA.reverse(); →　配列を逆順にする
-        sampleArrayA.reverse();
+        console.log(sampleArrayA);
+        console.log("ここまでがsampleArrayA");
 
+
+        // sampleArrayA.reduce(toOneDimension); →二次元配列を一次元配列にして前の処理に結合させたもの
         var sampleArrayB = sampleArrayA.reduce(toOneDimension);
+
+        console.log(sampleArrayB);
+        console.log("ここまでがsampleArrayB");
+
+
+        // counterVar →０から始まり、一次元配列の長さ（９）未満まで1ずつ足していく
         for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
+            // 文字列＋０から８まで
+
             document.write('sampleArrayB[' + counterVar + ']:');
 
-            //[counterVar]の追加 ← ０から始まり、一次元配列の長さ（９）未満まで 一次元配列を繰り返す
+            // ０から始まり、一次元配列の長さ（９）未満までsampleArrayAの一次元配列を繰り返す
             document.write(sampleArrayB[counterVar]);
+            console.count(sampleArrayB[counterVar]);
+
             document.write('<br/>');
         }
-    </script>
+        console.log("繰り返し回数");
 
-    <!---->
+    </script>
 
 </body>
 
