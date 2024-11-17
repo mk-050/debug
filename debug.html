@@ -20,8 +20,17 @@
 
     <script type="text/javascript">
 
-        //一つ前の処理に処理中の配列を結合させる関数
+        //処理中の配列に一つ前の配列を結合させる関数
         function toOneDimension(previousValue, currentValue) {
+            console.log(previousValue);
+            console.log("previousValue出力");
+
+            console.log(currentValue);
+            console.log("currentValue出力");
+
+            console.log(currentValue.concat(previousValue));
+            console.log("結合結果");
+
             return currentValue.concat(previousValue);
         }
 

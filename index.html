@@ -21,6 +21,15 @@
 
         //一つ前の処理に処理中の配列を結合させる関数
         function toOneDimension(previousValue, currentValue) {
+            console.log(previousValue);
+            console.log("previousValue出力");
+
+            console.log(currentValue);
+            console.log("currentValue出力");
+
+            console.log(previousValue.concat(currentValue));
+            console.log("結合結果");
+
             return previousValue.concat(currentValue);
         }
 
@@ -51,6 +60,10 @@
             // ０から始まり、一次元配列の長さ（９）未満までsampleArrayAの一次元配列を繰り返す
             document.write(sampleArrayB[counterVar]);
             console.count(sampleArrayB[counterVar]);
+            console.log("ここまでがsampleArrayB[counterVar]");
+
+            console.count(sampleArrayB);
+            console.log("ここまでがsampleArrayB");
 
             document.write('<br/>');
         }
